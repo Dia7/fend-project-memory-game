@@ -5,7 +5,12 @@ let oneCard = document.querySelectorAll(".card");
 
 let cardList = [...oneCard];
 
- // * Display the cards on the page
+ // * Open the cards on the page
+var displayCard = $('.card').on('click', function(event) {
+    $(event.target).toggleClass('show');
+    $(event.target).toggleClass('open');
+    $(event.target).toggleClass('disable');
+});
  // *   - shuffle the list of cards using the provided "shuffle" method below
  // *   - loop through each card and create its HTML
  // *   - add each card's HTML to the page

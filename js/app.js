@@ -11,7 +11,20 @@ var displayCard = $('.card').on('click', function(event) {
     $(event.target).toggleClass('open');
     $(event.target).toggleClass('disable');
 });
- // *   - shuffle the list of cards using the provided "shuffle" method below
+
+// deck of all cards in the game
+const deck = document.querySelector(".deck");
+// *   - shuffle the list of cards using the provided "shuffle" method below
+function startGame(){
+   var shuffledCards = shuffle(cardList);
+   for (var i= 0; i < shuffledCards.length; i++){
+      [].forEach.call(shuffledCards, function(item){
+         deck.appendChild(item);
+      });
+   }
+}
+window.onload = startGame();
+
  // *   - loop through each card and create its HTML
  // *   - add each card's HTML to the page
 
@@ -30,7 +43,6 @@ function shuffle(array) {
 
     return array;
 }
-
 
 /*
  * set up the event listener for a card. If a card is clicked:

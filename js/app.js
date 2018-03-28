@@ -1,14 +1,15 @@
 /*
  * Create a list that holds all of your cards
  */
+let oneCard = document.querySelectorAll(".card");
 
+let cardList = [...oneCard];
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
+ // * Display the cards on the page
+ // *   - shuffle the list of cards using the provided "shuffle" method below
+ // *   - loop through each card and create its HTML
+ // *   - add each card's HTML to the page
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {

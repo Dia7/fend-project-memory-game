@@ -144,14 +144,14 @@ function moveCounter(){
         startTimer();
     }
        // setting rates based on moves
-    if (moves > 8 && moves < 12){
+    if (moves > 7 && moves < 14){
         for( i= 0; i < 3; i++){
             if(i > 1){
                 stars[i].style.visibility = "collapse";
             }
         }
     }
-    else if (moves > 13){
+    else if (moves > 14){
         for( i= 0; i < 3; i++){
             if(i > 0){
                 stars[i].style.visibility = "collapse";
@@ -159,8 +159,7 @@ function moveCounter(){
         }
     }
 }
-
- // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+    // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
 
 
 // loop to add event listeners to each card

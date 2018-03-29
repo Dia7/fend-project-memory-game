@@ -77,8 +77,20 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
+    background: lime;
     font-size: 33px;
+}
+/*When the selected cards do not match*/
+.deck .card.unmatched {
+    animation-name: pulse;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+    background: #e2043b;
+}
+.deck .card.disabled {
+    pointer-events: none;
+    opacity: 0.9;
 }
 
 /*

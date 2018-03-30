@@ -6,7 +6,7 @@
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -84,6 +84,23 @@
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
+        <div id="win-popup" class="cover">
+            <div class="popup">🍾🎉
+                <h2>Congratulations</h2>
+                 <a class="close_btn" href="#" >×</a>  
+                 <div class="content-1">
+                    You win!!!
+                </div>
+                <div class="content-2">
+                    <p>You made <span id="finalMove"></span> moves </p>
+                    <p>For  <span id="totalTime"> </span> </p>
+                    <p>Rating:  <span id="starRating"></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    PLAY </a>
+                </button>
+            </div>    
+        </div>
     </div>
 
     <script src="js/app.js"></script>

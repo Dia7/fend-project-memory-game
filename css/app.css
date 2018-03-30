@@ -190,7 +190,7 @@ h1 {
 .show_popup {
     position: absolute;
     width: 50%;
-    height: 50%;
+    height: auto;
     visibility: visible;
     opacity: 1;   
     background-color: white;    
@@ -198,4 +198,38 @@ h1 {
     text-align: center;
     border-radius: 5px;
     top: 40%;  
+}
+
+/*Responsiveness*/
+
+@media screen and (min-width: 300px){
+    ul.deck {
+        width: 85%;
+    }
+
+    li.card {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+    .show_popup {
+        top: 20%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    ul.deck {
+        width: 660px;
+        min-height: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .score-panel {
+        width: 660px;        
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .show_popup {
+        top: 15%;
+    }
 }

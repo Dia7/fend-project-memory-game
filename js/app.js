@@ -17,6 +17,11 @@ const deck = document.querySelector("#card-deck");
 let moves = 0;
 let counter = document.querySelector(".moves");
 
+// set the game timer
+let second = 0, minute = 0, hour = 0;
+let timer = document.querySelector(".timer");
+let interval;
+
 // declare variables for star icons
 const stars = document.querySelectorAll(".fa-star");
 
@@ -40,13 +45,11 @@ function startGame(){
     // *   - shuffle the list of cards using the provided "shuffle" method below
     cardList = shuffle(cardList);
 
+
+
     //reset timer
-    let timer = document.querySelector(".timer");
-    let second = 0;
-    let minute = 0;
-    let hour = 0;
+
     timer.innerHTML = "0 mins 0 secs";
-    let interval;
     clearInterval(interval);
 
      // reset moves
@@ -174,14 +177,10 @@ function moveCounter(){
     }
 }
 
-// set the game timer
-let second = 0, minute = 0;
-let timer = document.querySelector(".timer");
-let interval;
 
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = minute +"mins "+second+"secs";
+        timer.innerHTML = minute +" mins "+second+" secs";
         second++;
         if(second == 60){
             minute++;
@@ -219,7 +218,7 @@ function message(){
 }
 
 
-// @description close icon on modal
+// close popup window
 function closeWin(){
     closeX.addEventListener("click", function(e){
        $("#win-popup").toggleClass("show_popup");
@@ -229,7 +228,7 @@ function closeWin(){
 }
 
 
-// // @desciption for user to play Again
+// play again
 function playAgain(){
     $("#win-popup").toggleClass("show_popup");
     $("#win-popup").toggleClass("cover");
@@ -242,5 +241,4 @@ for (let i = 0; i < cardList.length; i++){
     oneCard.addEventListener("click", displayCard);
     oneCard.addEventListener("click", cardOpen);
     // oneCard.addEventListener("click", message);
-
 }

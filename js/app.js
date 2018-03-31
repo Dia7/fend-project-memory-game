@@ -13,7 +13,7 @@ let matchedCard = document.querySelector(".match");
 // deck of all cards in game
 const deck = document.querySelector("#card-deck");
 
-// declaring move variable
+// declaring moves variable
 let moves = 0;
 let counter = document.querySelector(".moves");
 
@@ -45,10 +45,7 @@ function startGame(){
     // *   - shuffle the list of cards using the provided "shuffle" method below
     cardList = shuffle(cardList);
 
-
-
     //reset timer
-
     timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
 
@@ -110,7 +107,7 @@ function matched(){
 
     // Condition for the popup window to show
     // call message() function
-    if (document.querySelectorAll('.match').length === 2) message();
+    if (document.querySelectorAll('.match').length === 16) message();
 
     openedCards = [];
 
@@ -177,7 +174,6 @@ function moveCounter(){
     }
 }
 
-
 function startTimer(){
     interval = setInterval(function(){
         timer.innerHTML = minute +" mins "+second+" secs";
@@ -217,16 +213,15 @@ function message(){
         closeWin();
 }
 
-
 // close popup window
 function closeWin(){
     closeX.addEventListener("click", function(e){
        $("#win-popup").toggleClass("show_popup");
         startGame();
+        $("#win-popup").hide();
 
     });
 }
-
 
 // play again
 function playAgain(){

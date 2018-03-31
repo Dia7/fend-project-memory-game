@@ -28,9 +28,6 @@ const stars = document.querySelectorAll(".fa-star");
 // close icon in the popup window
 let closeX = document.querySelector(".close_btn");
 
- // declare the winning window
-let win = document.querySelector("#win-popup");
-
 // * Open the cards on the page
 let displayCard = $(".card").on("click", function(event) {
     $(event.target).toggleClass("show");
@@ -159,14 +156,14 @@ function moveCounter(){
     }
        // setting rates based on moves
     if (moves > 20 && moves < 35){
-        for( i= 0; i < 3; i++){
+        for(let i= 0; i < 3; i++){
             if(i > 1){
                 stars[i].style.visibility = "collapse";
             }
         }
     }
     else if (moves > 36){
-        for( i= 0; i < 3; i++){
+        for(let i= 0; i < 3; i++){
             if(i > 0){
                 stars[i].style.visibility = "collapse";
             }
@@ -199,7 +196,7 @@ function message(){
 
         clearInterval(interval);
 
-        finalTime = timer.innerHTML;
+        const finalTime = timer.innerHTML;
 
         // declare star rating variable
         let starRating = document.querySelector(".stars").innerHTML;
